@@ -1,0 +1,263 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5DD3C2BC-ED86-4351-8A10-60E81DD6A5AD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>QLHSBN</RootNamespace>
+    <AssemblyName>QLHSBN</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlClient, Version=4.6.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SqlClient.4.9.0\lib\net462\System.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="baocaodoanhthu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="baocaodoanhthu.Designer.cs">
+      <DependentUpon>baocaodoanhthu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="common.cs" />
+    <Compile Include="Dangnhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dangnhap.Designer.cs">
+      <DependentUpon>Dangnhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dataset\baocao.cs">
+      <DependentUpon>baocao.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dataset\baocao.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>baocao.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="doanhthu.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>doanhthu.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HSDangKyKham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HSDangKyKham.Designer.cs">
+      <DependentUpon>HSDangKyKham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="inphieuthu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="inphieuthu.Designer.cs">
+      <DependentUpon>inphieuthu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nhanvien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nhanvien.Designer.cs">
+      <DependentUpon>Nhanvien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Phieunhapvien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Phieunhapvien.Designer.cs">
+      <DependentUpon>Phieunhapvien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhieuThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhieuThu.Designer.cs">
+      <DependentUpon>PhieuThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Phongbenh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Phongbenh.Designer.cs">
+      <DependentUpon>Phongbenh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Phongkham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Phongkham.Designer.cs">
+      <DependentUpon>Phongkham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Hsbn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hsbn.Designer.cs">
+      <DependentUpon>Hsbn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyThuoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyThuoc.Designer.cs">
+      <DependentUpon>QuanLyThuoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaoPXN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaoPXN.Designer.cs">
+      <DependentUpon>TaoPXN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThongKeBenhNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThongKeBenhNhan.Designer.cs">
+      <DependentUpon>ThongKeBenhNhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToaThuoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ToaThuoc.Designer.cs">
+      <DependentUpon>ToaThuoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\Session.cs" />
+    <Compile Include="Dichvu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dichvu.Designer.cs">
+      <DependentUpon>Dichvu.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="baocaodoanhthu.resx">
+      <DependentUpon>baocaodoanhthu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dangnhap.resx">
+      <DependentUpon>Dangnhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="doanhthu.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>doanhthu.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HSDangKyKham.resx">
+      <DependentUpon>HSDangKyKham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="inphieuthu.resx">
+      <DependentUpon>inphieuthu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nhanvien.resx">
+      <DependentUpon>Nhanvien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Phieunhapvien.resx">
+      <DependentUpon>Phieunhapvien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhieuThu.resx">
+      <DependentUpon>PhieuThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Phongbenh.resx">
+      <DependentUpon>Phongbenh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Phongkham.resx">
+      <DependentUpon>Phongkham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Hsbn.resx">
+      <DependentUpon>Hsbn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyThuoc.resx">
+      <DependentUpon>QuanLyThuoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaoPXN.resx">
+      <DependentUpon>TaoPXN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dichvu.resx">
+      <DependentUpon>Dichvu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongKeBenhNhan.resx">
+      <DependentUpon>ThongKeBenhNhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToaThuoc.resx">
+      <DependentUpon>ToaThuoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="dataset\baocao.xsc">
+      <DependentUpon>baocao.xsd</DependentUpon>
+    </None>
+    <None Include="dataset\baocao.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>baocao.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dataset\baocao.xss">
+      <DependentUpon>baocao.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
